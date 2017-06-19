@@ -1,0 +1,16 @@
+{
+	"name": "paperbark",
+	"description": "PaperBark SDK for Node",
+	"version": "1.0.0",
+	"keywords": ["paperbark", "pdf", "sdk"],
+	"homepage": "https://github.com/paperbark/node-sdk#readme",
+	"author": "PaperBark <development@paperbark.io>",
+	"main": "src/paperbark.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/paperbark/node-sdk.git"
+	},
+	"bugs": {
+		"url": "https://github.com/paperbark/node-sdk/issues"
+	}
+}
