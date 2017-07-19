@@ -1,12 +1,14 @@
+const http = require('http');
 const https = require('https');
 const zlib = require('zlib');
+const url = require('url');
 
 class api {
 	/**
 	 * @param {string} token - PaperBark project token
 	 */
 	constructor(token) {
-		this._host = 'api.paperbark.io';
+		this._server = 'https://api.paperbark.io/';
 		this._token = token;
 	}
 
@@ -43,8 +45,11 @@ class api {
 			if (options.body && options.contentType)
 				headers['Content-Type'] = options.contentType;
 
-			let request = https.request({
-				hostname: this._host,
+			let server = url.parse(this._server);
+			let protocolClass = server.protocol === 'http:' ? http : https;
+			let request = protocolClass.request({
+				hostname: server.hostname,
+				port: server.port,
 				method: options.method || 'GET',
 				path: options.path || '/',
 				headers: headers

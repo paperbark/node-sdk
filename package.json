@@ -1,7 +1,7 @@
 {
 	"name": "paperbark",
 	"description": "PaperBark SDK for Node",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"keywords": ["paperbark", "pdf", "sdk"],
 	"homepage": "https://github.com/paperbark/node-sdk#readme",
 	"license": "GPL-3",
